@@ -33,5 +33,5 @@ else:
     print("Request was not successful. Status code:", response.status_code)
 
 
-## Augabe 1.
+## Augabe 1.3
 
