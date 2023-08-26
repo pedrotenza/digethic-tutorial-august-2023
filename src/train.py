@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
-import prickle
+import pickle
 
 # Read csv-file
 data = pd.read_csv("data/auto.mpg.csv", sep=";")
@@ -30,4 +30,4 @@ y_pred = regressor.predict(x_test)
 print(y_pred)
 
 file_to_write = open("data/models/baummethoden_lr.pickle", "wb")
-prickle.dump(regressor, file_to_write)
+pickle.dump(regressor, file_to_write)
