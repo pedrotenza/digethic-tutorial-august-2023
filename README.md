@@ -17,9 +17,9 @@ The `.vscode` directory contains configurations for useful extensions like [GitL
 Open the [integrated terminal](https://code.visualstudio.com/docs/editor/integrated-terminal) and run the setup script for your OS (see below). This will install a [Python virtual environment](https://docs.python.org/3/library/venv.html) with all packages specified in `requirements.txt`.
 
 ### Linux and Mac Users
-
+source .venv/bin/activate
 1. run the setup script: `./setup.sh` or `sh setup.sh`
-2. activate the python environment: `source .venv/bin/activate`
+2. activate the python environment: ``
 3. run example code: `python src/hello.py`
 4. install new dependency: `pip install sklearn`
 5. save current installed dependencies back to requirements.txt: `pip freeze > requirements.txt`
