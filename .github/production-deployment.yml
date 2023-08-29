@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Switch to heroku branch
         shell: bash
-        run: |
+        run:
           git config --global user.email ""
           git config --global user.name "Github Actions"
           git fetch --all --unshallow
@@ -29,12 +29,12 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: baummethoden.pickle
-          path: models/baummethoden.pickle
+          path: data\models\baummethoden_lr.pickle
       - name: Push changes to heroku branch
         shell: bash
         run: |
           git add .
-          git add --force models/baummethoden.pickle
+          git add --force data\models\baummethoden_lr.pickle
           git commit -m "[CI] update trained model" || echo "No changes to commit"
           git push --set-upstream origin heroku
       - name: Deploy to Heroku
